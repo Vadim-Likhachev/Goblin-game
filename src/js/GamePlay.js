@@ -17,7 +17,7 @@ export default class GamePlay {
     const body = document.querySelector('body');
     const container = document.createElement('div');
     container.classList.add('container');
-    container.innerHTML = '<h1 class=\'title\'>Goblin Battle!</h1>';
+    container.innerHTML = '<h1 class=\'title\'>Goblin Game</h1>';
     container.appendChild(board);
     body.insertBefore(container, body.firstChild);
     this.cells = [...board.children];
@@ -32,7 +32,6 @@ export default class GamePlay {
     this.deletedChar();
     this.position = position;
     this.adventChar();
-    // console.log(this.activeChar);
   }
 
   deletedChar() {
@@ -45,7 +44,6 @@ export default class GamePlay {
   adventChar() {
     this.activeChar = this.char.getChar();
     this.cells[this.position].appendChild(this.activeChar);
-    // console.log(this.position);
   }
 
   start() {

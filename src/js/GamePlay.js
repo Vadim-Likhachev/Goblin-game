@@ -12,7 +12,7 @@ export default class GamePlay {
   }
 
   redrawBoard() {
-    const board = this.board.getBoard(4);
+    const board = this.board.newBoard();
     const body = document.querySelector('body');
     const container = document.createElement('div');
     container.classList.add('container');
